@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>voiture List</title>
+  </head>
+  <body>
+    <h1>voiture List</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>type</th>
+      </tr>
+      <% for (let car of cars) { %>
+      <tr>
+        <td><%= car.name %></td>
+        <td><%= car.type %></td>
+      </tr>
+      <% } %>
+    </table>
+    <h2>Add a New car</h2>
+    <form action="/" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br />
+      <label for="type">type:</label>
+      <input type="text" id="type" name="type" /><br />
+      <input type="submit" value="Add car" />
+    </form>
+  </body>
+</html>
